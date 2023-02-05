@@ -1,0 +1,17 @@
+.dashboard-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: auto;
+}
+.dashboard-content-container {
+    margin: 1em;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+    overflow: auto;
+}
