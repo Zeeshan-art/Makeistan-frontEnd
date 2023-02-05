@@ -1,0 +1,50 @@
+.labelReg{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  .regInput{
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    padding: 9.5px 0;
+    transition: all .3s ease-in-out;
+    color: #333;
+    border: 1px solid transparent;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    outline: none;
+  }
+  .regInput:hover {
+    border-bottom: 2px solid #333;
+  }
+  
+  
+  .main-button{
+    font-weight: 500;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 0;
+    background-color: #333;
+    font-size: 14px;
+    padding: 15px 40px;
+    transition-duration: .7s;
+    cursor: pointer;
+  }
+  
+  .main-button:hover{
+    color: #333!important;
+    background-color: transparent;
+  }
+  .rsymbol{
+    color: red;
+  }
+  .main-form{
+    padding: 60px 50px;
+  }

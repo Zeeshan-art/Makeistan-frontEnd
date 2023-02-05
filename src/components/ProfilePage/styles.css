@@ -1,0 +1,12 @@
+.profile-img img{
+    border-radius: 50%;
+    border: 6px solid #ffffff;
+    box-shadow: 1px 1px 4px #c7c7c7;
+}
+.shadow{
+    box-shadow: 1px 1px 3px 1.5px #dbdbdb;
+    border-radius: 5px;
+}
+.SellerId h5{
+    font-weight: 600;
+}
