@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Grid from '@mui/material/Grid';
 import AddProduct from '../../forms/AddProducts/index';
+import './styles.css'
 
 const style = {
   position: 'absolute',
@@ -29,7 +30,7 @@ export default function BasicModal() {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Add product</Button>
+      <Button className= "btn" onClick={handleOpen}>Add product</Button>
       <Modal
         open={open}
         onClose={handleClose}

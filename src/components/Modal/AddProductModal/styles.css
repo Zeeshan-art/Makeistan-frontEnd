@@ -1,0 +1,14 @@
+.btn{
+    font-weight: 500;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #333;
+    border-radius: 0;
+    background-color: #333;
+    font-size: 14px;
+    padding: 15px 40px;
+    transition-duration: .7s;
+    cursor: pointer;
+}
