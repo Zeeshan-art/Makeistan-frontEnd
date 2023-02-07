@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import SignUp from './components/forms/signup/index';
-import Login from './components/forms/login/index';
+import SignUp from './components/forms/Signup/index';
+import Login from './components/forms/Login/index';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Dashboard from './components/DashboadHeader/index'
 import ManageProducts from './pages/Products/index'

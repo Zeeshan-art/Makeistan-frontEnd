@@ -19,7 +19,7 @@ const AddProducts = () => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    jwtToken : `${localStorage.getItem('jwtToken')}`,
+                    jwtToken: `${localStorage.getItem('jwtToken')}`,
 
                 },
                 body: JSON.stringify(
@@ -31,7 +31,7 @@ const AddProducts = () => {
 
             if (res.status === 422 || !results) {
                 window.alert("Product Data Not Added");
-            } else if(res.status===200) {
+            } else if (res.status === 200) {
                 window.alert("Product Added Successfully");
             }
 
@@ -73,7 +73,7 @@ const AddProducts = () => {
                             {...register("description", {
                                 required: true,
                                 minLength: 5,
-                                maxLength:200
+                                maxLength: 200
                             })}
                         />
                         {errors?.description?.type === "required" && <p>This field is required</p>}
@@ -88,7 +88,7 @@ const AddProducts = () => {
                         <input
                             type="text"
                             name="img"
-                            accept="image/*" 
+                            accept="image/*"
                             className="regInput"
                             {...register("image", {
                                 required: true
@@ -150,6 +150,12 @@ const AddProducts = () => {
                             Sub Cetagory ID <span className="rsymbol">*</span>{" "}
                         </label>
                         <br />
+
+                        {/* <select {...register("category")}>
+                            <option value="">Select...</option>
+                            <option value="1">Clothes</option>
+                            <option value="1">Mobile</option>
+                        </select> */}
                         <input
 
                             name="subcategoryId"
