@@ -15,3 +15,15 @@
     gap:25px;
     overflow: auto;
 }
+.dashboard-content-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.dashboard-content-header h2 {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: black;
+    font-size: xx-large;
+    font-weight: 700;
+}

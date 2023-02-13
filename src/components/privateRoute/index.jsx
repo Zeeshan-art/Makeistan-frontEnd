@@ -7,8 +7,8 @@ const Protected = (props) => {
     const navigate = useNavigate();
 
     useEffect(()=>{
-        let login = localStorage.getItem('login');
-        if(!login){
+      const token = localStorage.getItem('jwtToken');
+        if(!token){
             navigate("/sellerLogin");
         }
     })

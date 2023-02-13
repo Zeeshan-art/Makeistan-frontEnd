@@ -1,14 +1,23 @@
 .btn{
+    margin-top: 16px!important;
+    margin-left: 16px!important;
     font-weight: 500;
-    display: inline-block;
+    display: inline-block!important;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #fff;
-    border: 1px solid #333;
+    color: #fff!important;
+    border: 1px solid #772ebb;
     border-radius: 0;
-    background-color: #333;
+    background-color: #772ebb!important;
     font-size: 14px;
-    padding: 15px 40px;
+    padding: 10px 30px;
     transition-duration: .7s;
     cursor: pointer;
-}
+    border: 1px!important;
+    
+  }
+  
+  .btn:hover{
+    color: #772ebb!important;
+    background-color: transparent!important;
+  }

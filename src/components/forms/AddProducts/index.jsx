@@ -2,7 +2,11 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "./styles.css";
 
+import {useDispatch} from 'react-redux'
+import { addProduct } from "../../../redux/slice/products/thunk";
 const AddProducts = () => {
+
+    const dispatch = useDispatch();
 
     const {
         register,
@@ -15,29 +19,37 @@ const AddProducts = () => {
     const onSubmit = async (data) => {
 
         try {
-            const res = await fetch("http://localhost:5000/api/seller/product/addProduct", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    jwtToken: `${localStorage.getItem('jwtToken')}`,
 
-                },
-                body: JSON.stringify(
-                    data
-                ),
-            });
-
-            const results = await res.json();
-
-            if (res.status === 422 || !results) {
-                window.alert("Product Data Not Added");
-            } else if (res.status === 200) {
-                window.alert("Product Added Successfully");
-            }
-
+            dispatch(addProduct(data));
+            
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
+
+        // try {
+        //     const res = await fetch("http://localhost:5000/api/seller/product/addProduct", {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json",
+        //             jwtToken: `${localStorage.getItem('jwtToken')}`,
+
+        //         },
+        //         body: JSON.stringify(
+        //             data
+        //         ),
+        //     });
+
+        //     const results = await res.json();
+
+        //     if (res.status === 422 || !results) {
+        //         window.alert("Product Data Not Added");
+        //     } else if (res.status === 200) {
+        //         window.alert("Product Added Successfully");
+        //     }
+
+        // } catch (error) {
+        //     console.error(error);
+        // }
 
     };
 
@@ -151,11 +163,7 @@ const AddProducts = () => {
                         </label>
                         <br />
 
-                        {/* <select {...register("category")}>
-                            <option value="">Select...</option>
-                            <option value="1">Clothes</option>
-                            <option value="1">Mobile</option>
-                        </select> */}
+                        {/*   */}
                         <input
 
                             name="subcategoryId"

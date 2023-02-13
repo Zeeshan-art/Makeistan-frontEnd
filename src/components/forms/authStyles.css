@@ -6,7 +6,7 @@
     text-transform: uppercase;
     color: #333;
   }
-  .regInput{
+  .regInputPurple{
     font-size: 14px;
     display: block;
     width: 100%;
@@ -18,28 +18,28 @@
     background: transparent;
     outline: none;
   }
-  .regInput:hover {
-    border-bottom: 2px solid #333;
+  .regInputPurple:hover {
+    border-bottom: 2px solid #772ebb;
   }
   
   
-  .main-button{
+  .purple-button{
     font-weight: 500;
     display: inline-block;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #fff;
-    border: 1px solid #333;
+    border: 1px solid #772ebb;
     border-radius: 0;
-    background-color: #333;
+    background-color: #772ebb;
     font-size: 14px;
     padding: 15px 40px;
     transition-duration: .7s;
     cursor: pointer;
   }
   
-  .main-button:hover{
-    color: #333!important;
+  .purple-button:hover{
+    color: #772ebb!important;
     background-color: transparent;
   }
   .rsymbol{
@@ -47,4 +47,17 @@
   }
   .main-form{
     padding: 60px 50px;
+    background-color: hsl(0, 0%, 100%);
+
+  }
+
+  .sign-up {
+    margin-top: 3%;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333;
+
   }

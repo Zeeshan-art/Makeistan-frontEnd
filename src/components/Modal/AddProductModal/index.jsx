@@ -12,7 +12,7 @@ const style = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: 800,
+  width: 600,
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
@@ -39,7 +39,7 @@ export default function BasicModal() {
       >
         <Box sx={style}>
           <Grid container spacing={2}>
-            <Grid item xs={8}>
+            <Grid item xs={12}>
               <AddProduct />
             </Grid>
           </Grid>
