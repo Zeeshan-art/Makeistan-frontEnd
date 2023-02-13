@@ -3,7 +3,7 @@ import './styles.css'
 import NotificationIcon from '../../assets/icons/notification.svg'
 import SettingsIcon from '../../assets/icons/settings.svg'
 
-const index = () => {
+const Dashboard = () => {
     return(
         <div className='dashbord-header-container'>
             {/* btnText && 
@@ -29,4 +29,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Dashboard

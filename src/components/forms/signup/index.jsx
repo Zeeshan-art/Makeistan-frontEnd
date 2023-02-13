@@ -1,4 +1,5 @@
 import React from "react";
+import '../authStyles.css'
 import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -22,10 +23,11 @@ const SignUp = () => {
         //console.log(data);
 
         try {
-            toast.success("Successfully Signup");
+            
 
             dispatch(sellerSignUp(data))
             navigate("/sellerLogin");
+            toast.success("Successfully Signup");
 
         } catch (error) {
             console.log(error);
@@ -51,7 +53,7 @@ const SignUp = () => {
                         <input
                             name="email"
                             type="email"
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("email", {
                                 required: "This field is required",
                                 pattern: /\S+@\S+\.\S+/,
@@ -72,7 +74,7 @@ const SignUp = () => {
                         <input
                             name="password"
                             type="password"
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("password", {
                                 required: true,
                                 minLength: 8,
@@ -93,7 +95,7 @@ const SignUp = () => {
                             type="text"
                             name="img"
                             //accept="image/*" 
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("profilePicture", {
                                 // required: "Input is required"
 
@@ -109,7 +111,7 @@ const SignUp = () => {
 
                             name="fullName"
                             type="text"
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("fullName", {
                                 required: "This field is required"
                             })}
@@ -126,7 +128,7 @@ const SignUp = () => {
                         <input
                             name="phonenumber"
                             type="tel"
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("mobileNumber", {
                                 required: true,
 
@@ -147,17 +149,18 @@ const SignUp = () => {
                         <br />
                         <input
                             name="CNIC"
-                            className="regInput"
-                            type="number"
+                            className="regInputPurple"
                             {...register("CNIC", {
-                                // required: true,
-                                // minLength: 13,
-                                // maxLength: 13
+                                required: true,
+                                pattern: /\d+/,
+                                minLength: 13,
+                                maxLength: 13
                             })}
                         />
-                        {/* {errors?.mobileNumber?.type === "required" && <p>This field is required</p>}
-                        {errors?.mobileNumber?.type === "minLength" && <p>Length must be 13</p>}
-                        {errors?.mobileNumber?.type === "maxLength" && <p>Length must be 13</p>} */}
+                        {errors?.CNIC?.type === "required" && <p>This field is required</p>}
+                        {errors?.CNIC?.type === "pattern" && <p>CNIC must be in digits</p>}
+                        {errors?.CNIC?.type === "minLength" && <p>Length must be 13</p>}
+                        {errors?.CNIC?.type === "maxLength" && <p>Length must be 13</p>}
                         <br />
                         <label className="labelReg">
                             Address
@@ -169,13 +172,13 @@ const SignUp = () => {
                         <input
 
                             name="address"
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("address", {
-                                // required: true
+                                required: true
 
                             })}
                         />
-                        {/* {errors?.address?.type === "required" && <p>This field is required</p>} */}
+                        {errors?.address?.type === "required" && <p>This field is required</p>}
                         <br />
                         <label className="labelReg">
                             Shop Name
@@ -186,12 +189,12 @@ const SignUp = () => {
                         <br />
                         <input
                             name="shopName"
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("shopName", {
-                                //required: true
+                                required: true
                             })}
                         />
-                        {/* {errors?.shopName?.type === "required" && <p>This field is required</p>} */}
+                        {errors?.shopName?.type === "required" && <p>This field is required</p>}
                         <br />
                         <label className="labelReg">
                             CNIC Picture
@@ -204,23 +207,23 @@ const SignUp = () => {
                             type="text"
                             name="img"
                             //accept="image/*" 
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("cnicPicture", {
-                                //required: "Input is required"
+                                required: "This field is required"
 
                             })}
                         />
-                        {/* {errors.cnicPicture && <p>{errors.cnicPicture.message}</p>} */}
+                        {errors.cnicPicture && <p>{errors.cnicPicture.message}</p>}
                         <br />
                         <input
                             type="submit"
                             name="addProduct"
                             id="addProduct"
-                            className="main-button"
+                            className="purple-button"
                             value="Submit"
                         ></input>
                     </form>
-                    <Link to="/sellerLogin">Login</Link>
+                    <div className="sign-up">Click here to <Link to="/sellerLogin">Login</Link></div>
                 </div>
             </div>
         </>

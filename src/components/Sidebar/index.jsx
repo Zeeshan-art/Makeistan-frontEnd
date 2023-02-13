@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import SideBarItem from './sidebar-item.jsx';
 
 import './styles.css';
-import logo from '../../assets/images/white-logo.png';
+import logo from '../../assets/images/logo.png';
 import LogoutIcon from '../../assets/icons/logout.svg';
 import { toast } from 'react-toastify';
 

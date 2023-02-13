@@ -10,13 +10,14 @@ import Profile from './pages/Profile/index'
 import SideBar from './components/Sidebar';
 import sidebar_menu from './constants/sidebar_menu';
 import Protected from './components/privateRoute';
-import {toast } from 'react-toastify'
+import {toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <ToastContainer/>
         <div className='dashboard-container'>
           <SideBar menu={sidebar_menu} />
           <div className='dashboard-body'>

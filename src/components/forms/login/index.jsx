@@ -1,5 +1,5 @@
 import React from "react";
-import './styles.css'
+import '../authStyles.css'
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import {toast } from 'react-toastify';
@@ -18,56 +18,25 @@ const Login = () => {
         formState: { errors }
     } = useForm();
 
-    //const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}/;
 
     const onSubmit = async (data) => {
 
-        console.log(data);
+        //console.log(data);
         
         try {
             
-            localStorage.setItem('login',true)
-            dispatch(sellerLogin(data))
-            navigate("/");
-            toast.success("Successfully login");
-            //navigate("/sellerLogin");
+            const res = await dispatch(sellerLogin(data));
+            if ( res ){
+                navigate("/");
+                console.log(" something ");
+
+            }
             
         } catch (error) {
-            console.log(error);
-    
+            console.error("Login Error: ",error.message);    
         }
     }
-
-    
-
-    // const onSubmit = async (data) => {
-
-    //     try {
-    //         const res = await fetch("http://localhost:5000/api/seller/login", {
-    //             method: "POST",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //             },
-    //             body: JSON.stringify(
-    //                 data
-    //             ),
-    //         });
-
-    //         const results = await res.json();
-
-    //         if (results.jwtToken){
-    //             localStorage.setItem("jwtToken", results.jwtToken);
-    //             toast.success("Successfully Login")
-    //             navigate("/");
-    //         }
-
-    //     } catch (error) {
-    //         console.error(error);
-    //         window.alert("Wrong Credentials");
-    //     }
-
-    // };
 
     return (
         <>
@@ -88,7 +57,7 @@ const Login = () => {
                         <input
                             name="email"
                             type="email"
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("email", {
                                 required: "This field is required",
                                 pattern: /\S+@\S+\.\S+/,
@@ -112,7 +81,7 @@ const Login = () => {
                         <input
                             name="password"
                             type="password"
-                            className="regInput"
+                            className="regInputPurple"
                             {...register("password", {
                                 required: true,
                                 minLength: 8,
@@ -130,13 +99,12 @@ const Login = () => {
                             type="submit"
                             name="addProduct"
                             id="addProduct"
-                            className="main-button"
+                            className="purple-button"
                             value="Submit"
                         ></input>
                     </form>
-                    <span>Click here to <Link to="/sellerSignup">SignUp</Link></span>
-                    
                 </div>
+                    <div className="sign-up">Click here to <Link to="/sellerSignup">SignUp</Link></div>
             </div>
         </>
     );

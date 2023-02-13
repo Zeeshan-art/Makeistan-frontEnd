@@ -1,4 +1,28 @@
-.labelReg{
+.btn{
+    margin-top: 16px!important;
+    margin-left: 16px!important;
+    font-weight: 500;
+    display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff!important;
+    border: 1px solid #772ebb;
+    border-radius: 0;
+    background-color: #772ebb!important;
+    font-size: 14px;
+    padding: 15px 40px;
+    transition-duration: .7s;
+    cursor: pointer;
+    border: 1px!important;
+    
+  }
+  
+  .btn:hover{
+    color: #772ebb!important;
+    background-color: transparent!important;
+  }
+
+  .labelReg{
 
     font-size: 15px;
     font-weight: 500;
@@ -6,9 +30,6 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #333;
-  }
-  .form-inner{
-    text-align: left;
   }
   .regInput{
     font-size: 14px;
@@ -21,7 +42,6 @@
     /* border-bottom: 2px solid #ccc; */
     background: transparent;
     outline: none;
-    padding-left: 5px;
   }
   .regInput:hover {
     border: 2px solid #772ebb;
@@ -41,6 +61,7 @@
     padding: 15px 40px;
     transition-duration: .7s;
     cursor: pointer;
+    padding-left: 5px;
   }
   
   .main-button:hover{
