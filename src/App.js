@@ -1,9 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import SignUp from './components/forms/Signup/index';
-import Login from './components/forms/Login/index';
+import SignUp from './components/forms/signup/index';
+import Login from './components/forms/login/index';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Dashboard from './components/DashboadHeader/index'
+import Dashboard from './components/dashboadHeader/index'
 import ManageProducts from './pages/Products/index'
 import ManageOrders from './pages/Orders/index'
 import Profile from './pages/Profile/index'
